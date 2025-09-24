@@ -1,0 +1,74 @@
+name: Linter
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 1"
+
+jobs:
+  # This workflow contains a single job called "build"
+  lintBib:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Install bibtex-tidy
+        run: sudo npm install -g bibtex-tidy
+      - name: Bib linter (bibtex-tidy from Makefile)
+        run: make lint_bib
+      - name: Check nothing changed
+        id: modificationCheck
+        continue-on-error: true
+        run: git diff --exit-code GUTbib.bib
+
+      # if the bib files were correctly formatted, git diff returns 0, and none of the following steps are executed
+      - name: Create patch
+        if: steps.modificationCheck.outcome == 'failure'
+        run: git diff GUTbib.bib > bibfilemodification.patch
+      - name: 'Upload tidied bibtex files and patch as artifacts'
+        if: steps.modificationCheck.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: tidiedBibFiles
+          path: |
+            GUTbib.bib
+            bibfilemodification.patch
+      - name: get short SHA
+        # for having the short SHA available later
+        id: vars
+        run: echo "sha_short=$( echo ${{ github.event.pull_request.head.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
+      - name: Create nice message
+        if: steps.modificationCheck.outcome == 'failure'
+        id: creatingMessage
+        run: |
+          echo 'diff<<EOF' > $GITHUB_OUTPUT
+
+          echo 'This PR (latest commit [`${{ steps.vars.outputs.sha_short }}`](${{ github.server_url }}/${{ github.repository }}/pull/${{ github.event.number }}/commits/${{ github.event.pull_request.head.sha }})) is not correctly formatted.' >> $GITHUB_OUTPUT
+          echo 'The difference is ' >> $GITHUB_OUTPUT
+          echo '```patch' >> $GITHUB_OUTPUT
+          git diff GUTbib.bib >> $GITHUB_OUTPUT
+          echo '```' >> $GITHUB_OUTPUT
+          echo 'Fix before merging.' >> $GITHUB_OUTPUT
+          echo '(You can also check the artifact of the run, probably at ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})' >> $GITHUB_OUTPUT
+
+          echo 'EOF' >> $GITHUB_OUTPUT
+      - name: if PR, post to PR thread
+        if: ${{ (steps.modificationCheck.outcome == 'failure') && (github.event_name == 'pull_request') }}
+        uses: actions/github-script@v6
+        env:
+          DIFF: ${{ steps.creatingMessage.outputs.diff }}
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: process.env.DIFF
+            })
+      - name: Check nothing changed
+        if: steps.modificationCheck.outcome == 'failure'
+        run: |
+          echo "Unstashed changes in neuroTMA.bib, format your bib file before comitting"
+          echo "Tidied bib as well as patch are provided as an artifact, which is accessible in the summary"
+          exit 1
