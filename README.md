@@ -31,31 +31,8 @@ or just copy the file into the repo.
 
 ### Updating references
 When preprints are accepted and there is a journal version available, you might want to create an entry with a new key (maybe because the year has incremented, or the title got changed).
-In this case (or whenever you want to have multiple labels return the same entry), use [`crossref`](https://bibtex.eu/fields/crossref/) to ensure downwards compability (as mentioned above, keys are not allowed to be changed).
-Example of a change, see [this commit](https://github.com/unibe-cns/GUT-bib/commit/839bd7466fcadecae62996bd646739d9e2560ede):
-```diff
- 
--@misc{stradmann2024lui,
-+@article{stradmann2024lui,
-+  crossref      = {stradmann2025lui}
-+}
-+
-+@article{stradmann2025lui,
-   title         = {Lu.i -- A low-cost electronic neuron for education and outreach},
-   author        = {Stradmann, Yannik and G\"{o}ltz, Julian and Petrovici, Mihai A. and Schemmel, Johannes and Billaudelle, Sebastian},
--  year          = 2024,
--  doi           = {10.48550/arxiv.2404.16664},
--  eprint        = {2404.16664},
--  archiveprefix = {arXiv},
--  primaryclass  = {q-bio.NC}
-+  year          = 2025,
-+  journal       = {Trends in Neuroscience and Education},
-+  volume        = 38,
-+  pages         = 100248,
-+  doi           = {10.1016/j.tine.2025.100248},
-+  issn          = {2211-9493}
- }
-```
+In this case (or whenever you want to have multiple labels return the same entry), use the `ids` key to ensure downwards compability (as mentioned above, keys are not allowed to be changed).
+(The previous suggestion with `crossref` was a missuse and leads to problems; `ids` makes a lot more sense)
 
 
 
