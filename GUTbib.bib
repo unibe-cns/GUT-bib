@@ -1,13 +1,16 @@
 % Source is at https://github.com/unibe-cns/GUT-bib
 % To clean up and ensure correct formatting use bibtex tidy with config as in Makefile
 % make lint_bib
-@article{aamir2017lif,
+@inproceedings{aamir2017lif,
   title         = {From LIF to AdEx neuron models: Accelerated analog 65 nm CMOS implementation},
   author        = {Aamir, Syed Ahmed and M{\"u}ller, Paul and Kriener, Laura and Kiene, Gerd and Schemmel, Johannes and Meier, Karlheinz},
   year          = 2017,
-  journal       = {2017 IEEE Biomedical Circuits and Systems Conference (BioCAS)},
+  month         = oct,
+  booktitle     = {2017 IEEE Biomedical Circuits and Systems Conference (BioCAS)},
+  publisher     = {IEEE},
   pages         = {1--4},
-  organization  = {IEEE}
+  doi           = {10.1109/biocas.2017.8325167},
+  url           = {http://dx.doi.org/10.1109/BIOCAS.2017.8325167}
 }
 
 @article{aamir2018lifarray,
@@ -347,14 +350,16 @@
   url           = {http://dx.doi.org/10.3389/fnins.2024.1396966}
 }
 
-@article{amos2025integrated,
+@misc{amos2025integrated,
   title         = {An Integrated In Vitro Platform and Biophysical Modeling Approach for Studying Synaptic Transmission in Isolated Neuronal Pairs},
   author        = {Amos, Giulia and Vasiliauskait\.{e}, Vaiva and Duru, Jens and Saramago, Maria Leonor Azevedo and Schmid, Tim and Suter, Alexandre and Torren, Ferran Cid and K\"{u}chler, Jo\"{e}l and Ruff, Tobias and V\"{o}r\"{o}s, J\'{a}nos and Vuli\'{c}, Katarina},
   year          = 2025,
   month         = jun,
   publisher     = {Cold Spring Harbor Laboratory},
   doi           = {10.1101/2025.06.04.657933},
-  url           = {http://dx.doi.org/10.1101/2025.06.04.657933}
+  url           = {http://dx.doi.org/10.1101/2025.06.04.657933},
+  archiveprefix = {bioRxiv},
+  eprint        = {2025.06.04.657933}
 }
 
 @misc{andersson2019deep,
@@ -852,6 +857,18 @@ url = {https://www.cnbc.cmu.edu/~tai/nc19journalclubs/Barlow-SensoryCommunicatio
   langid        = {english}
 }
 
+@inproceedings{basu2022spiking,
+  title         = {Spiking Neural Network Integrated Circuits: A Review of Trends and Future Directions},
+  author        = {Basu, Arindam and Deng, Lei and Frenkel, Charlotte and Zhang, Xueyong},
+  year          = 2022,
+  month         = apr,
+  booktitle     = {2022 IEEE Custom Integrated Circuits Conference (CICC)},
+  publisher     = {IEEE},
+  pages         = {1--8},
+  doi           = {10.1109/cicc53496.2022.9772783},
+  url           = {http://dx.doi.org/10.1109/CICC53496.2022.9772783}
+}
+
 @misc{bauer2022exodus,
   title         = {{{EXODUS}}: {{Stable}} and {{Efficient Training}} of {{Spiking Neural Networks}}},
   shorttitle    = {{EXODUS}},
@@ -1162,6 +1179,21 @@ url = {https://www.cnbc.cmu.edu/~tai/nc19journalclubs/Barlow-SensoryCommunicatio
   langid        = {american}
 }
 
+@article{benjamin2014neurogrid,
+  title         = {Neurogrid: A Mixed-Analog-Digital Multichip System for Large-Scale Neural Simulations},
+  author        = {Benjamin, Ben Varkey and Gao, Peiran and McQuinn, Emmett and Choudhary, Swadesh and Chandrasekaran, Anand R. and Bussat, Jean-Marie and Alvarez-Icaza, Rodrigo and Arthur, John V. and Merolla, Paul A. and Boahen, Kwabena},
+  year          = 2014,
+  month         = may,
+  journal       = {Proceedings of the IEEE},
+  publisher     = {Institute of Electrical and Electronics Engineers (IEEE)},
+  volume        = 102,
+  number        = 5,
+  pages         = {699--716},
+  doi           = {10.1109/jproc.2014.2313565},
+  issn          = {1558-2256},
+  url           = {http://dx.doi.org/10.1109/JPROC.2014.2313565}
+}
+
 @article{bentrop2001nmr,
   title         = {NMR Structure of the ``Ball-and-chain'' Domain of KCNMB2, the \ensuremath{\beta}2-Subunit of Large Conductance Ca2+- and Voltage-activated Potassium Channels},
   author        = {Bentrop, Detlef and Beyermann, Michael and Wissmann, Ralph and Fakler, Bernd},
@@ -1229,6 +1261,16 @@ url = {https://www.cnbc.cmu.edu/~tai/nc19journalclubs/Barlow-SensoryCommunicatio
   doi           = {10.1073/pnas.94.10.5411},
   issn          = {1091-6490},
   url           = {http://dx.doi.org/10.1073/pnas.94.10.5411}
+}
+
+@misc{berthelot2018understanding,
+  title         = {Understanding and Improving Interpolation in Autoencoders via an Adversarial Regularizer},
+  author        = {David Berthelot and Colin Raffel and Aurko Roy and Ian Goodfellow},
+  year          = 2018,
+  url           = {https://arxiv.org/abs/1807.07543},
+  eprint        = {1807.07543},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG}
 }
 
 @article{betti2016principle,
@@ -1562,6 +1604,18 @@ url = {https://www.cnbc.cmu.edu/~tai/nc19journalclubs/Barlow-SensoryCommunicatio
   primaryclass  = {physics.optics}
 }
 
+@inproceedings{bolte2020mathematical,
+  title         = {A mathematical model for automatic differentiation in machine learning},
+  author        = {Bolte, J\'{e}r\^{o}me and Pauwels, Edouard},
+  year          = 2020,
+  booktitle     = {Advances in Neural Information Processing Systems},
+  publisher     = {Curran Associates, Inc.},
+  volume        = 33,
+  pages         = {10809--10819},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2020/file/7a674153c63cff1ad7f0e261c369ab2c-Paper.pdf},
+  editor        = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin}
+}
+
 @misc{bolte2023onestep,
   title         = {One-Step Differentiation of Iterative Algorithms},
   author        = {Bolte, J{\'e}r{\^o}me and Pauwels, Edouard and Vaiter, Samuel},
@@ -1628,13 +1682,16 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
 
 @article{boybat2018neuromorphic,
   title         = {Neuromorphic computing with multi-memristive synapses},
-  author        = {Boybat, Irem and Le Gallo, Manuel and Nandakumar, SR and Moraitis, Timoleon and Parnell, Thomas and Tuma, Tomas and Rajendran, Bipin and Leblebici, Yusuf and Sebastian, Abu and Eleftheriou, Evangelos},
+  author        = {Boybat, Irem and Le Gallo, Manuel and Nandakumar, S. R. and Moraitis, Timoleon and Parnell, Thomas and Tuma, Tomas and Rajendran, Bipin and Leblebici, Yusuf and Sebastian, Abu and Eleftheriou, Evangelos},
   year          = 2018,
-  journal       = {Nature communications},
-  publisher     = {Nature Publishing Group UK London},
+  month         = jun,
+  journal       = {Nature Communications},
+  publisher     = {Springer Science and Business Media LLC},
   volume        = 9,
   number        = 1,
-  pages         = 2514
+  doi           = {10.1038/s41467-018-04933-y},
+  issn          = {2041-1723},
+  url           = {http://dx.doi.org/10.1038/s41467-018-04933-y}
 }
 
 @article{boyd1985fading,
@@ -1800,11 +1857,13 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   shorttitle    = {Philosophy of the {{Spike}}},
   author        = {Brette, Romain},
   year          = 2015,
+  month         = nov,
   journal       = {Frontiers in Systems Neuroscience},
   publisher     = {Frontiers},
   volume        = 9,
   doi           = {10.3389/fnsys.2015.00151},
   issn          = {1662-5137},
+  url           = {http://dx.doi.org/10.3389/fnsys.2015.00151},
   langid        = {english},
   keywords      = {Action Potentials,firing rate,information,Neural coding,neural computation,neural variability,spike timing}
 }
@@ -2524,14 +2583,17 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   urldate       = {2025-10-20}
 }
 
-@article{comsa2020temporal,
+@inproceedings{comsa2020temporal,
   title         = {Temporal coding in spiking neural networks with alpha synaptic function},
-  author        = {Comsa, Iulia M and Fischbacher, Thomas and Potempa, Krzysztof and Gesmundo, Andrea and Versari, Luca and Alakuijala, Jyrki},
+  author        = {Com\c{s}a, Iulia-Maria and Fischbacher, Thomas and Potempa, Krzysztof and Gesmundo, Andrea and Versari, Luca and Alakuijala, Jyrki},
   year          = 2020,
+  month         = may,
   journal       = {ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  publisher     = {IEEE},
   pages         = {8529--8533},
-  ids           = {comsa2019temporal,},
-  organization  = {IEEE}
+  doi           = {10.1109/icassp40776.2020.9053856},
+  url           = {http://dx.doi.org/10.1109/ICASSP40776.2020.9053856},
+  ids           = {comsa2019temporal,}
 }
 
 @article{comsa2021spiking,
@@ -2545,6 +2607,21 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   doi           = {10.3389/fnins.2021.712667},
   issn          = {1662-453X},
   url           = {http://dx.doi.org/10.3389/fnins.2021.712667}
+}
+
+@article{comsa2022temporal,
+  title         = {Temporal Coding in Spiking Neural Networks With Alpha Synaptic Function: Learning With Backpropagation},
+  author        = {Com\c{s}a, Iulia-Maria and Potempa, Krzysztof and Versari, Luca and Fischbacher, Thomas and Gesmundo, Andrea and Alakuijala, Jyrki},
+  year          = 2022,
+  month         = oct,
+  journal       = {IEEE Transactions on Neural Networks and Learning Systems},
+  publisher     = {Institute of Electrical and Electronics Engineers (IEEE)},
+  volume        = 33,
+  number        = 10,
+  pages         = {5939--5952},
+  doi           = {10.1109/tnnls.2021.3071976},
+  issn          = {2162-2388},
+  url           = {http://dx.doi.org/10.1109/TNNLS.2021.3071976}
 }
 
 @inproceedings{confavreux2023metalearning,
@@ -4115,13 +4192,16 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   keywords      = {Neuromodulation,novelty,plasticity,Reward Learning,spiking neuron networks,STDP,Success,surprise,Synaptic plasticity (LTP/LTD)}
 }
 
-@article{frenkel202028,
+@inproceedings{frenkel202028,
   title         = {A 28-nm Convolutional Neuromorphic Processor Enabling Online Learning with Spike-Based Retinas},
   author        = {Frenkel, Charlotte and Legat, Jean-Didier and Bol, David},
   year          = 2020,
-  journal       = {2020 IEEE International Symposium on Circuits and Systems (ISCAS)},
+  month         = oct,
+  booktitle     = {2020 IEEE International Symposium on Circuits and Systems (ISCAS)},
+  publisher     = {IEEE},
   pages         = {1--5},
-  organization  = {IEEE}
+  doi           = {10.1109/iscas45731.2020.9180440},
+  url           = {http://dx.doi.org/10.1109/ISCAS45731.2020.9180440}
 }
 
 @article{frenkel2021learning,
@@ -7034,16 +7114,15 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   archiveprefix = {arXiv}
 }
 
-@article{kingma2014autoencoding,
+@misc{kingma2014autoencoding,
   title         = {Auto-{{Encoding Variational Bayes}}},
   author        = {Kingma, Diederik P. and Welling, Max},
   year          = 2014,
   month         = may,
-  journal       = {arXiv:1312.6114 [cs, stat]},
+  url           = {https://arxiv.org/abs/1312.6114},
   eprint        = {1312.6114},
-  primaryclass  = {cs, stat},
   archiveprefix = {arXiv},
-  keywords      = {Computer Science - Machine Learning,Statistics - Machine Learning}
+  primaryclass  = {stat.ML}
 }
 
 @article{kiureghian2009aleatory,
@@ -7980,8 +8059,10 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   author        = {Lee, Dong-Hyun and Zhang, Saizheng and Fischer, Asja and Bengio, Yoshua},
   year          = 2015,
   booktitle     = {Joint european conference on machine learning and knowledge discovery in databases},
+  publisher     = {Springer International Publishing},
   pages         = {498--515},
-  organization  = {Springer}
+  doi           = {10.1007/978-3-319-23528-8_31},
+  url           = {http://dx.doi.org/10.1007/978-3-319-23528-8_31}
 }
 
 @article{lee2016training,
@@ -8014,6 +8095,18 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   publisher     = {Frontiers Media SA},
   volume        = 13,
   pages         = 520
+}
+
+@inproceedings{lee2020correctness,
+  title         = {On Correctness of Automatic Differentiation for Non-Differentiable Functions},
+  author        = {Lee, Wonyeol and Yu, Hangyeol and Rival, Xavier and Yang, Hongseok},
+  year          = 2020,
+  booktitle     = {Advances in Neural Information Processing Systems},
+  publisher     = {Curran Associates, Inc.},
+  volume        = 33,
+  pages         = {6719--6730},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2020/file/4aaa76178f8567e05c8e8295c96171d8-Paper.pdf},
+  editor        = {H. Larochelle and M. Ranzato and R. Hadsell and M.F. Balcan and H. Lin}
 }
 
 @article{lee2022complexvalued,
@@ -9204,11 +9297,14 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   url           = {http://dx.doi.org/10.1088/2634-4386/aded2d}
 }
 
-@article{mayr2019spinnaker,
+@misc{mayr2019spinnaker,
   title         = {SpiNNaker 2: A 10 Million Core Processor System for Brain Simulation and Machine Learning},
-  author        = {Mayr, Christian and Hoeppner, Sebastian and Furber, Steve},
+  author        = {Christian Mayr and Sebastian Hoeppner and Steve Furber},
   year          = 2019,
-  journal       = {arXiv preprint arXiv:1911.02385}
+  url           = {https://arxiv.org/abs/1911.02385},
+  eprint        = {1911.02385},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.ET}
 }
 
 @article{mcculloch1943logical,
@@ -9881,23 +9977,13 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   title         = {Fast classification using sparsely active spiking networks},
   author        = {Mostafa, Hesham and Pedroni, Bruno U. and Sheik, Sadique and Cauwenberghs, Gert},
   year          = 2017,
-  booktitle     = {2017 IEEE International Symposium on Circuits and Systems (ISCAS)},
-  pages         = {1--4},
-  organization  = {IEEE}
-}
-
-@article{mostafa2017fpga,
-  title         = {Fast classification using sparsely active spiking networks},
-  author        = {H. {Mostafa} and B. U. {Pedroni} and S. {Sheik} and G. {Cauwenberghs}},
-  year          = 2017,
   month         = may,
-  journal       = {2017 IEEE International Symposium on Circuits and Systems (ISCAS)},
-  volume        = {},
-  number        = {},
+  booktitle     = {2017 IEEE International Symposium on Circuits and Systems (ISCAS)},
+  publisher     = {IEEE},
   pages         = {1--4},
-  doi           = {10.1109/ISCAS.2017.8050527},
-  issn          = {},
-  keywords      = {energy conservation;field programmable gate arrays;image classification;image coding;network routing;neural nets;optical character recognition;fast classification;sparsely active spiking networks;spike generation;network routing;neuromorphic hardware;spiking neurons;spiking neural networks;rate-coding;neurons spike rate;information content;temporal coding;FPGA platform;MNIST digits classification;hidden layer;synaptic time constants;network dynamics;digital hardware;temporal dynamics;improved energy efficiency;Neurons;Field programmable gate arrays;Hardware;Training;Biological neural networks;Encoding;Adaptation models}
+  doi           = {10.1109/iscas.2017.8050527},
+  url           = {http://dx.doi.org/10.1109/ISCAS.2017.8050527},
+  ids           = {mostafa2017fpga}
 }
 
 @article{mostafa2018supervised,
@@ -9910,8 +9996,7 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   number        = 7,
   pages         = {3227--3235},
   doi           = {10.1109/TNNLS.2017.2726060},
-  issn          = {2162-2388},
-  keywords      = {Backpropagation,Biological neural networks,Encoding,Feedforward neural networks,Neurons,Nonhomogeneous media,spiking networks,supervised learning,Training}
+  issn          = {2162-2388}
 }
 
 @article{mountcastle1957modality,
@@ -10962,22 +11047,28 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   pages         = {042312}
 }
 
-@article{petrovici2017pattern,
+@inproceedings{petrovici2017pattern,
   title         = {Pattern representation and recognition with accelerated analog neuromorphic systems},
-  author        = {Petrovici, Mihai A and Schmitt, Sebastian and Kl{\"a}hn, Johann and St{\"o}ckel, David and Schroeder, Anna and Bellec, Guillaume and Bill, Johannes and Breitwieser, Oliver and Bytschok, Ilja and Gr{\"u}bl, Andreas and others},
+  author        = {Petrovici, Mihai A. and Schmitt, Sebastian and Kl{\"a}hn, Johann and St{\"o}ckel, David and Schroeder, Anna and Bellec, Guillaume and Bill, Johannes and Breitwieser, Oliver and Bytschok, Ilja and Gr{\"u}bl, Andreas and G{\"u}ttler, M. and Hartel, A. and Hartmann, S. and Husmann, D. and Husmann, K. and Jeltsch, S. and Karasenko, V. and Kleider, M. and Koke, C. and Kononov, A. and Mauch, C. and M{\"u}ller, E. and M{\"u}ller, P. and Partzsch, J. and Pfeil, T. and Schiefer, S. and Scholze, S. and Subramoney, A. and Thanasoulis, V. and Vogginger, B. and Legenstein, R. and Maass, W. and Schuffny, R. and Mayr, C. and Schemmel, J. and Meier, K.},
   year          = 2017,
-  journal       = {2017 IEEE International Symposium on Circuits and Systems (ISCAS)},
+  month         = may,
+  booktitle     = {2017 IEEE International Symposium on Circuits and Systems (ISCAS)},
+  publisher     = {IEEE},
   pages         = {1--4},
-  organization  = {IEEE}
+  doi           = {10.1109/iscas.2017.8050530},
+  url           = {http://dx.doi.org/10.1109/ISCAS.2017.8050530}
 }
 
-@article{petrovici2017robustness,
+@inproceedings{petrovici2017robustness,
   title         = {Robustness from structure: Inference with hierarchical spiking networks on analog neuromorphic hardware},
-  author        = {Petrovici, Mihai A and Schroeder, Anna and Breitwieser, Oliver and Gr{\"u}bl, Andreas and Schemmel, Johannes and Meier, Karlheinz},
+  author        = {Petrovici, Mihai A. and Schroeder, Anna and Breitwieser, Oliver and Gr{\"u}bl, Andreas and Schemmel, Johannes and Meier, Karlheinz},
   year          = 2017,
-  journal       = {2017 International Joint Conference on Neural Networks (IJCNN)},
+  month         = may,
+  booktitle     = {2017 International Joint Conference on Neural Networks (IJCNN)},
+  publisher     = {IEEE},
   pages         = {2209--2216},
-  organization  = {IEEE}
+  doi           = {10.1109/ijcnn.2017.7966123},
+  url           = {http://dx.doi.org/10.1109/IJCNN.2017.7966123}
 }
 
 @article{pfeiffer2018deep,
@@ -11307,13 +11398,16 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   pages         = 13
 }
 
-@article{prodromakis2010review,
+@inproceedings{prodromakis2010review,
   title         = {A review on memristive devices and applications},
-  author        = {Prodromakis, Themistoklis and Toumazou, Chris},
+  author        = {Prodromakis, T. and Toumazou, C.},
   year          = 2010,
-  journal       = {2010 17th IEEE International Conference on Electronics, Circuits and Systems},
+  month         = dec,
+  booktitle     = {2010 17th IEEE International Conference on Electronics, Circuits and Systems},
+  publisher     = {IEEE},
   pages         = {934--937},
-  organization  = {IEEE}
+  doi           = {10.1109/icecs.2010.5724666},
+  url           = {http://dx.doi.org/10.1109/ICECS.2010.5724666}
 }
 
 @misc{projectapertus2025apertus,
@@ -12175,30 +12269,37 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   title         = {A wafer-scale neuromorphic hardware system for large-scale neural modeling},
   author        = {Schemmel, Johannes and Br{\"u}derle, Daniel and Gr{\"u}bl, Andreas and Hock, Matthias and Meier, Karlheinz and Millner, Sebastian},
   year          = 2010,
-  booktitle     = {2010 IEEE International Symposium on Circuits and Systems (ISCAS)},
-  pages         = {1947--1950},
-  organization  = {IEEE}
+  month         = may,
+  booktitle     = {Proceedings of 2010 IEEE International Symposium on Circuits and Systems},
+  publisher     = {IEEE},
+  doi           = {10.1109/iscas.2010.5536970},
+  url           = {http://dx.doi.org/10.1109/ISCAS.2010.5536970}
 }
 
-@article{schemmel2017accelerated,
+@inproceedings{schemmel2017accelerated,
   title         = {An accelerated analog neuromorphic hardware system emulating NMDA-and calcium-based non-linear dendrites},
   author        = {Schemmel, Johannes and Kriener, Laura and M{\"u}ller, Paul and Meier, Karlheinz},
   year          = 2017,
-  journal       = {2017 International Joint Conference on Neural Networks (IJCNN)},
+  month         = may,
+  booktitle     = {2017 International Joint Conference on Neural Networks (IJCNN)},
+  publisher     = {IEEE},
   pages         = {2217--2226},
-  organization  = {IEEE}
+  doi           = {10.1109/ijcnn.2017.7966124},
+  url           = {http://dx.doi.org/10.1109/IJCNN.2017.7966124}
 }
 
-@article{schemmel2020accelerated,
-  title         = {Accelerated {{Analog Neuromorphic Computing}}},
-  author        = {Schemmel, Johannes and Billaudelle, Sebastian and Dauer, Phillip and Weis, Johannes},
-  year          = 2020,
-  month         = mar,
-  journal       = {arXiv:2003.11996 [cond-mat, q-bio]},
-  eprint        = {2003.11996},
-  primaryclass  = {cond-mat, q-bio},
-  archiveprefix = {arXiv},
-  keywords      = {Computer Science - Neural and Evolutionary Computing,Condensed Matter - Disordered Systems and Neural Networks,Quantitative Biology - Neurons and Cognition}
+@inbook{schemmel2021accelerated,
+  title         = {Accelerated Analog Neuromorphic Computing},
+  author        = {Schemmel, Johannes and Billaudelle, Sebastian and Dauer, Philipp and Weis, Johannes},
+  year          = 2021,
+  month         = dec,
+  booktitle     = {Analog Circuits for Machine Learning, Current/Voltage/Temperature Sensors, and High-speed Communication},
+  publisher     = {Springer International Publishing},
+  pages         = {83--102},
+  doi           = {10.1007/978-3-030-91741-8_6},
+  isbn          = 9783030917418,
+  url           = {http://dx.doi.org/10.1007/978-3-030-91741-8_6},
+  ids           = {schemmel2020accelerated}
 }
 
 @misc{scherr2020oneshot,
@@ -12406,6 +12507,21 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   doi           = {10.1145/3381755.3381758},
   url           = {http://dx.doi.org/10.1145/3381755.3381758},
   collection    = {NICE '20}
+}
+
+@article{schuman2022opportunities,
+  title         = {Opportunities for neuromorphic computing algorithms and applications},
+  author        = {Schuman, Catherine D. and Kulkarni, Shruti R. and Parsa, Maryam and Mitchell, J. Parker and Date, Prasanna and Kay, Bill},
+  year          = 2022,
+  month         = jan,
+  journal       = {Nature Computational Science},
+  publisher     = {Springer Science and Business Media LLC},
+  volume        = 2,
+  number        = 1,
+  pages         = {10--19},
+  doi           = {10.1038/s43588-021-00184-y},
+  issn          = {2662-8457},
+  url           = {http://dx.doi.org/10.1038/s43588-021-00184-y}
 }
 
 @article{schwalger2017theory,
@@ -13310,13 +13426,16 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   keywords      = {Coupling,Dynamics,Emergence,Neural computation,Self-organisation,Spiking neural networks}
 }
 
-@article{stromatias2015scalable,
-  title         = {Scalable energy-efficient, low-latency implementations of trained spiking deep belief networks on spinnaker},
+@inproceedings{stromatias2015scalable,
+  title         = {Scalable energy-efficient, low-latency implementations of trained spiking Deep Belief Networks on SpiNNaker},
   author        = {Stromatias, Evangelos and Neil, Daniel and Galluppi, Francesco and Pfeiffer, Michael and Liu, Shih-Chii and Furber, Steve},
   year          = 2015,
-  journal       = {2015 International Joint Conference on Neural Networks (IJCNN)},
+  month         = jul,
+  booktitle     = {2015 International Joint Conference on Neural Networks (IJCNN)},
+  publisher     = {IEEE},
   pages         = {1--8},
-  organization  = {IEEE}
+  doi           = {10.1109/ijcnn.2015.7280625},
+  url           = {http://dx.doi.org/10.1109/IJCNN.2015.7280625}
 }
 
 @inproceedings{strubell2019energy,
@@ -13576,13 +13695,16 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   pages         = {e26975}
 }
 
-@article{tavanaei2018training,
-  title         = {Training spiking convnets by stdp and gradient descent},
-  author        = {Tavanaei, Amirhossein and Kirby, Zachary and Maida, Anthony S},
+@inproceedings{tavanaei2018training,
+  title         = {Training Spiking ConvNets by STDP and Gradient Descent},
+  author        = {Tavanaei, Amirhossein and Kirby, Zachary and Maida, Anthony S.},
   year          = 2018,
-  journal       = {2018 International Joint Conference on Neural Networks (IJCNN)},
+  month         = jul,
+  booktitle     = {2018 International Joint Conference on Neural Networks (IJCNN)},
+  publisher     = {IEEE},
   pages         = {1--8},
-  organization  = {IEEE}
+  doi           = {10.1109/ijcnn.2018.8489104},
+  url           = {http://dx.doi.org/10.1109/IJCNN.2018.8489104}
 }
 
 @article{tavanaei2019deep,
@@ -13777,6 +13899,16 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   primaryclass  = {physics, q-bio},
   archiveprefix = {arXiv},
   keywords      = {Physics - Biological Physics,Quantitative Biology - Molecular Networks,Quantitative Biology - Neurons and Cognition}
+}
+
+@misc{tolstikhin2021mlpmixer,
+  title         = {MLP-Mixer: An all-MLP Architecture for Vision},
+  author        = {Ilya Tolstikhin and Neil Houlsby and Alexander Kolesnikov and Lucas Beyer and Xiaohua Zhai and Thomas Unterthiner and Jessica Yung and Andreas Steiner and Daniel Keysers and Jakob Uszkoreit and Mario Lucic and Alexey Dosovitskiy},
+  year          = 2021,
+  url           = {https://arxiv.org/abs/2105.01601},
+  eprint        = {2105.01601},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV}
 }
 
 @article{tong20252d,
@@ -14463,7 +14595,8 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   booktitle     = {System Modeling and Optimization: Proceedings of the 10th IFIP Conference New York City, USA, August 31--September 4, 1981},
   pages         = {762--770},
   ids           = {werbos2005applications,},
-  organization  = {Springer}
+  related       = {werbos2005applicationsReprint},
+  relatedstring = {Reprinted in}
 }
 
 @article{werbos1990backpropagation,
@@ -14479,6 +14612,19 @@ url           = {https://neilgreenberg.com/ao-quote-borges-on-exactitude-in-scie
   doi           = {10.1109/5.58337},
   issn          = {1558-2256},
   keywords      = {Artificial neural networks,Backpropagation,Books,Control systems,Equations,Fluid dynamics,Neural networks,Pattern recognition,Power system modeling,Supervised learning}
+}
+
+@inbook{werbos2005applicationsReprint,
+  title         = {Applications of advances in nonlinear sensitivity analysis},
+  author        = {Werbos, Paul J.},
+  year          = 2005,
+  month         = sep,
+  booktitle     = {System Modeling and Optimization},
+  publisher     = {Springer-Verlag},
+  pages         = {762--770},
+  doi           = {10.1007/bfb0006203},
+  isbn          = 3540116915,
+  url           = {http://dx.doi.org/10.1007/BFb0006203}
 }
 
 @misc{westerberg2025sensory,
