@@ -3,6 +3,7 @@
 # delete abstract fields
 delete.field = { abstract }
 delete.field = { file }
+delete.field = { keywords }
 # key formatting
 key.format = "%-1n(author)%d(year)%-T(title)"
 # for key generation, don't include et al

@@ -4,13 +4,21 @@
 everythingOK=true
 
 # linting the bib file (defined in Makefile)
-tmpString="$(make lint_bib)"
-if [ "$?" -ne 0 ]; then
+check_duplicates() {
+	# werbos is a reprint, so ignore that one
+	grep "DUPLICATE_ENTRY" | grep -v "werbos2005applicationsReprint"
+}
+if ! tmpString="$(make lint_bib)" ; then
 	echo ":::::::::::::::::::::::::"
 	echo "the bib linter encountered the following error"
 	echo ":::::::::::::::::::::::::"
 	echo "$tmpString"
 	everythingOK=false
+elif echo "$tmpString" | check_duplicates >/dev/null; then
+	echo ":::::::::::::::::::::::::"
+	echo "no error, but duplicate entries:"
+	echo "$tmpString" | check_duplicates
+	echo ":::::::::::::::::::::::::"
 fi
 
 
