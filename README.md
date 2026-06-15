@@ -25,7 +25,7 @@ This is done automatically if you execute `make lint_bib` (using [`bibtex-tidy`]
 ### Inclusion in a paper repo
 Include as git submodule, this way you can easily update:
 ```
-git submodule add https://github.com/unibe_cns/bib-neuroTMA [optionalPath]
+git submodule add https://github.com/unibe-cns/GUT-bib [optionalPath]
 ```
 or just copy the file into the repo.
 
