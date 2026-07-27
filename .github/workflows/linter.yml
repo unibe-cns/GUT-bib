@@ -34,7 +34,7 @@ jobs:
         run: git diff GUTbib.bib > bibfilemodification.patch
       - name: 'Upload tidied bibtex files and patch as artifacts'
         if: steps.modificationCheck.outcome == 'failure'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: tidiedBibFiles
           path: |
