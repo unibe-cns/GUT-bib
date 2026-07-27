@@ -22,7 +22,7 @@ jobs:
       - name: bibtex-tidy version
         run: bibtex-tidy --version
       - name: Bib linter (bibtex-tidy from Makefile)
-        run: make lint_bib
+        run: make lint_bib_noCheck
       - name: Check nothing changed
         id: modificationCheck
         continue-on-error: true

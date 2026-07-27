@@ -2,9 +2,12 @@ FILE=GUTbib.bib
 
 
 lint_bib:
+	$(MAKE) lint_bib_noCheck
+	git diff --exit-code $(FILE)
+
+lint_bib_noCheck:
 	$(MAKE) check_dirtyness
 	$(MAKE) unprotected_lint
-	git diff --exit-code $(FILE)
 
 check_dirtyness:
 	@echo "Checking that all bib files are staged, s.t. the change can be tracked"
