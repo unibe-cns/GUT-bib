@@ -10,13 +10,19 @@ jobs:
   lintBib:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           submodules: true
+      - name: setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 26
       - name: Install bibtex-tidy
         run: sudo npm install -g bibtex-tidy
+      - name: bibtex-tidy version
+        run: bibtex-tidy --version
       - name: Bib linter (bibtex-tidy from Makefile)
-        run: make lint_bib
+        run: make lint_bib_noCheck
       - name: Check nothing changed
         id: modificationCheck
         continue-on-error: true
@@ -28,7 +34,7 @@ jobs:
         run: git diff GUTbib.bib > bibfilemodification.patch
       - name: 'Upload tidied bibtex files and patch as artifacts'
         if: steps.modificationCheck.outcome == 'failure'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: tidiedBibFiles
           path: |
