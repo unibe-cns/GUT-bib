@@ -16,7 +16,7 @@ jobs:
       - name: setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
       - name: Install bibtex-tidy
         run: sudo npm install -g bibtex-tidy
       - name: Bib linter (bibtex-tidy from Makefile)
