@@ -19,6 +19,8 @@ jobs:
           node-version: 26
       - name: Install bibtex-tidy
         run: sudo npm install -g bibtex-tidy
+      - name: bibtex-tidy version
+        run: bibtex-tidy --version
       - name: Bib linter (bibtex-tidy from Makefile)
         run: make lint_bib
       - name: Check nothing changed
