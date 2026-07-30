@@ -14,7 +14,7 @@ check_dirtyness:
 	git diff --exit-code $(FILE) || (echo "unstashed changes in $(FILE) stash first"; exit 1)
 	
 unprotected_lint:
-	cat $(FILE) | bibtex-tidy --curly --numeric --duplicates --blank-lines --sort --sort-fields --output $(FILE)
+	cat $(FILE) | bibtex-tidy --curly --numeric --duplicates --blank-lines --sort --sort-fields --output $(FILE) 2>&1
 
 try_to_tidy:
 	$(MAKE) check_dirtyness

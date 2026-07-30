@@ -19,6 +19,7 @@ elif echo "$tmpString" | check_duplicates >/dev/null; then
 	echo "no error, but duplicate entries:"
 	echo "$tmpString" | check_duplicates
 	echo ":::::::::::::::::::::::::"
+	everythingOK=false
 fi
 
 
