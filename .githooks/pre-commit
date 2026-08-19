@@ -8,6 +8,11 @@ check_duplicates() {
 	# werbos is a reprint, so ignore that one
 	grep "DUPLICATE_ENTRY" | grep -v "werbos2005applicationsReprint"
 }
+
+check_months() {
+	grep -n "month[ ]* =" GUTbib.bib | grep "= [{0-9]"
+}
+
 if ! tmpString="$(make lint_bib)" ; then
 	echo ":::::::::::::::::::::::::"
 	echo "the bib linter encountered the following error"
@@ -18,6 +23,12 @@ elif echo "$tmpString" | check_duplicates >/dev/null; then
 	echo ":::::::::::::::::::::::::"
 	echo "no error, but duplicate entries:"
 	echo "$tmpString" | check_duplicates
+	echo ":::::::::::::::::::::::::"
+	everythingOK=false
+elif [ -n "$(check_months)" ]; then
+	echo ":::::::::::::::::::::::::"
+	echo "month problems"
+	check_months
 	echo ":::::::::::::::::::::::::"
 	everythingOK=false
 fi
